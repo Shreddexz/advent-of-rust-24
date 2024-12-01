@@ -62,11 +62,11 @@ fn get_number_similarity(list_col: (Vec<i32>, Vec<i32 >)) -> HashMap<i32, i32>{
     dict
 }
 
-fn calculate_similarity_score(dict: HashMap<i32, i32>) -> i128{
+fn calculate_similarity_score(dict: HashMap<i32, i32>) -> i32{
     let mut similarity: i32  = 0;
     for num in &dict {
         let sim = num.0 * num.1;
         similarity += sim;
     }
-    similarity.into()
+    similarity
 }
